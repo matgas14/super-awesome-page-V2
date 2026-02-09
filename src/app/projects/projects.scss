@@ -1,3 +1,17 @@
+.projects-table thead th {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	background: #2a1a3a;
+}
+.projects-table-scroll {
+	max-height: 650px;
+	overflow-y: auto;
+	width: 100%;
+}
+.projects-table tbody tr:nth-child(even) {
+	background-color: #e5e5eb;
+}
 
 // Projects page background and overlay (mirroring contact)
 
@@ -40,10 +54,33 @@
 	align-items: center;
 	opacity: 0.9;
     margin: auto 1rem;
+    // max-height: 750px;
+}
+
+.projects-table-content {
+    width: 100%;
+    max-height: 650px;
+    // overflow: auto;
+
+    table > thead {
+        width: 100%;
+        display: flex;
+        max-height: 650px;
+        overflow-y: auto;
+    }
+
+    table > tbody {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        max-height: 650px;
+        overflow-y: auto;
+    }
 }
 
 .projects-table {
 	width: 100%;
+	background-color: #f7f7fa;
 	border-collapse: collapse;
 	font-size: 1.1rem;
 }

@@ -16,8 +16,6 @@ export class App {
 
   constructor() {
     document.addEventListener('click', (event) => {
-      console.log(this.menuOpen());
-      console.log('Clicked element:', event.target);
       if(this.menuOpen() === true && !(event.target as HTMLElement).closest('.app-nav, .nav-toggle')) {
         this.menuOpen.set(false);
       }
