@@ -183,3 +183,27 @@
   }
 }
 
+.do-not-press {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-size: 0.1rem;
+  cursor: pointer;
+  z-index: 1003;
+  box-shadow: 0 4px 12px rgba(255,77,77,0.3);
+  transition: background-color 0.3s ease;
+  transition: font-size 0.3s ease;
+
+  &:hover {
+    font-size: 2rem;
+    background-color: #ff1a1a;
+    box-shadow: 0 6px 16px rgba(255,26,26,0.5);
+    transform: translateY(-2px);
+  }
+}
+
