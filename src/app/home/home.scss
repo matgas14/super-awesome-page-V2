@@ -23,21 +23,6 @@
     gap: clamp(1rem, 3vh, 3rem);
     padding-bottom: 1.35rem
   }
-
-//   @media (max-width: 1024px) and (min-width: 800px) {
-//     grid-template-columns: repeat(2, 1fr);
-//     gap: clamp(1.5rem, 3.5vh, 4rem);
-//   }
-
-//   @media (max-width: 800px) {
-//     grid-template-columns: repeat(2, 1fr);
-//     gap: clamp(1.5rem, 4vh, 5rem);
-//   }
-
-//   @media (max-width: 768px) {
-//     grid-template-columns: 1fr;
-//     gap: clamp(1rem, 3vh, 3rem);
-//   }
 }
 
 .hero-section {
@@ -70,7 +55,7 @@
 
 .menu-card {
   padding: 2rem;
-  background: #ccc;
+  background: white;
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   display: flex;
@@ -79,6 +64,7 @@
   justify-content: space-between;
   transition: all 0.3s ease;
   border: 3px solid transparent;
+  opacity: 0.9;
 
   @media (max-width: 1024px) {
     width: 100%;

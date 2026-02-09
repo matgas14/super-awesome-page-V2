@@ -1,0 +1,38 @@
+[
+  {
+    "project": "Carlstahl Webshop",
+    "company": "Juice d.o.o.",
+    "startDate": "2021-09-01T00:00:00.000Z",
+    "endDate": "2025-12-01T00:00:00.000Z",
+    "position": "Software Developer",
+    "available": true,
+    "url": "https://carlstahl.com"
+  },
+  {
+    "project": "Equipments App",
+    "company": "Juice d.o.o",
+    "startDate": "2021-09-01T00:00:00.000Z",
+    "endDate": "2025-12-01T00:00:00.000Z",
+    "position": "Software Developer",
+    "available": false,
+    "url": "N/a"
+  },
+  {
+    "project": "Booking App",
+    "company": "Evolutio d.o.o",
+    "startDate": "2021-01-01T00:00:00.000Z",
+    "endDate": "2021-09-01T00:00:00.000Z",
+    "position": "Frontend Developer",
+    "available": false,
+    "url": "N/a"
+  },
+  {
+    "project": "Jira features",
+    "company": "VenITure d.o.o.",
+    "startDate": "2020-03-01T00:00:00.000Z",
+    "endDate": "2021-01-01T00:00:00.000Z",
+    "position": "Frontend Developer",
+    "available": false,
+    "url": "N/a"
+  }
+]

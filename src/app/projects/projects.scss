@@ -1,0 +1,90 @@
+
+// Projects page background and overlay (mirroring contact)
+
+.projects-container {
+	min-height: 1077px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 0;
+	/* Only background image, overlay is on ::before */
+	background: url('/projects-background.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
+
+.projects-container::before {
+	content: '';
+	position: fixed;
+	top: 82px;
+	left: 0;
+	width: 100vw;
+	height: 1078px;
+	background: rgba(40, 10, 60, 0.45); /* semi-transparent purple shade */
+	z-index: 0;
+	pointer-events: none;
+}
+
+.projects-table-wrapper {
+	background: rgba(255, 255, 255, 0.95);
+	position: relative;
+	z-index: 1;
+	border-radius: 1.5rem;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+	padding: 2.5rem 2rem 2rem 2rem;
+	max-width: 1450px;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	opacity: 0.9;
+    margin: auto 1rem;
+}
+
+.projects-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 1.1rem;
+}
+.projects-table th, .projects-table td {
+	padding: 0.8rem 1.2rem;
+	border-bottom: 1px solid #e0e0e0;
+}
+.projects-table th {
+	background: #2a1a3a;
+	color: #fff;
+	font-weight: 700;
+}
+.projects-table tr:last-child td {
+	border-bottom: none;
+}
+.available {
+	color: #2e7d32;
+	font-weight: bold;
+}
+.unavailable {
+	color: #b71c1c;
+	font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+	.projects-table th.dates,
+	.projects-table td.dates {
+		display: none;
+	}
+}
+
+@media (max-width: 900px) {
+	.projects-table th.position,
+	.projects-table td.position {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.projects-table th.company,
+	.projects-table td.company {
+		display: none;
+	}
+}
