@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
+
+// New container for hero and grid
+.home-container {
+  background-image: url('/background.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100%;
+  padding: 2rem;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  gap: 2.5rem;
+  padding: 0;
+  background: transparent;
+  min-height: 100%;
+  align-content: start;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 3vh, 3rem);
+    padding-bottom: 1.35rem
+  }
+
+//   @media (max-width: 1024px) and (min-width: 800px) {
+//     grid-template-columns: repeat(2, 1fr);
+//     gap: clamp(1.5rem, 3.5vh, 4rem);
+//   }
+
+//   @media (max-width: 800px) {
+//     grid-template-columns: repeat(2, 1fr);
+//     gap: clamp(1.5rem, 4vh, 5rem);
+//   }
+
+//   @media (max-width: 768px) {
+//     grid-template-columns: 1fr;
+//     gap: clamp(1rem, 3vh, 3rem);
+//   }
+}
+
+.hero-section {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .hero-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0 0 3.25rem 0;
+    color: #ccc;
+    line-height: 1.1;
+    letter-spacing: 1px;
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  .hero-tagline {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+    max-width: 90%;
+  }
+}
+
+/* Menu Cards: Projects (2:2), About (2:3), Contact (3:3) */
+.menu-card {
+  padding: 2rem;
+  background: #ccc;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  gap: 21px;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    border-color: #0A0E12;
+  }
+
+  h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    color: #0A0E12;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0;
+    flex-grow: 1;
+    line-height: 1.5;
+    min-height: 46px;
+  }
+
+  &.projects-card {
+    grid-column: 3;
+    grid-row: 1;
+
+    @media (max-width: 1024px) {
+      grid-column: 2 / 4;
+      grid-row: auto;
+    }
+
+    @media (max-width: 768px) {
+      grid-column: 1;
+      grid-row: auto;
+    }
+  }
+
+  &.about-card {
+    grid-column: 3;
+    grid-row: 2;
+
+    @media (max-width: 1024px) {
+      grid-column: 2 / 4;
+      grid-row: auto;
+    }
+
+    @media (max-width: 768px) {
+      grid-column: 1;
+      grid-row: auto;
+    }
+  }
+
+  &.contact-card {
+    grid-column: 3;
+    grid-row: 3;
+
+    @media (max-width: 1024px) {
+      grid-column: 2 / 4;
+      grid-row: auto;
+    }
+
+    @media (max-width: 768px) {
+      grid-column: 1;
+      grid-row: auto;
+    }
+  }
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #0A0E12;
+  color: #ccc;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-family: 'Fredoka', sans-serif;
+  transition: all 0.3s ease;
+  border: 2px solid #0A0E12;
+  cursor: pointer;
+  text-align: center;
+  width: fit-content;
+
+  &:hover {
+    background-color: #1a1f26;
+    border-color: #1a1f26;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Wizard Image: Row 3-4, Column 2 */
+.wizard-image {
+  grid-column: 2;
+  grid-row: 2 / 4;
+  border-radius: 12px;
+  overflow: hidden;
+  background-image: url('/wizard.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
