@@ -68,7 +68,6 @@
   }
 }
 
-/* Menu Cards: Projects (2:2), About (2:3), Contact (3:3) */
 .menu-card {
   padding: 2rem;
   background: #ccc;
@@ -89,7 +88,6 @@
 
   &:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
     border-color: #0A0E12;
   }
 
@@ -113,6 +111,21 @@
   &.projects-card {
     grid-column: 3;
     grid-row: 1;
+
+    @media (max-width: 1024px) {
+      grid-column: 2 / 4;
+      grid-row: auto;
+    }
+
+    @media (max-width: 768px) {
+      grid-column: 1;
+      grid-row: auto;
+    }
+  }
+
+  &.schenanigans-card {
+    grid-column: 3;
+    grid-row: 2;
 
     @media (max-width: 1024px) {
       grid-column: 2 / 4;
