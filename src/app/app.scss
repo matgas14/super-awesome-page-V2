@@ -50,6 +50,7 @@
 .app-nav {
   display: flex;
   gap: 1.5rem;
+  transition: right 0.3s, opacity 0.3s;
 
   a {
     color: white;
@@ -67,6 +68,76 @@
       font-weight: bold;
     }
   }
+
+  @media (max-width: 768px) {
+    position: absolute;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    background-color: #0A0E12;
+    box-shadow: none;
+    padding: 0;
+    top: 82px;
+    left: 401px;
+    z-index: 999;
+    a {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+      background: #181c22;
+      border-bottom: 1px solid #222;
+      display: none;
+    }
+    &.mobile-open a {
+      display: block;
+      animation: dropdownFade 0.2s;
+    }
+    &.mobile-open {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+      border-radius: 0 0 8px 8px;
+    }
+  }
+}
+
+@keyframes dropdownFade {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1002;
+  @media (max-width: 768px) {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: 0;
+    top: 0;
+    right: 0;
+  }
+}
+
+.nav-overlay {
+  display: none;
+}
+
+@media (max-width: 580px) {
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    z-index: 1000;
+  }
+
 }
 
 .app-body {
