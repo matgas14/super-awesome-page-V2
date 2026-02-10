@@ -1,34 +1,32 @@
-﻿<div class="contact-container">
-	<div class="contact-card">
-		<img src="/profile.jpg" alt="Matej Gašpert profile photo" class="profile-img" />
-		<h1 class="contact-name">Matej Gašpert</h1>
-		<h2 class="contact-title">software developer</h2>
-		<div>
-			<div class="contact-bio">
-                Full-stack developer with 5 years of experience developing and maintaining
-                responsive front-end websites with complex back-end servers, focusing on
-                webshops, CRM’s, and custom internal management software. Experienced with
-                HTML, CSS and JS Frameworks, with knowledge of UX and user psychology, as
-                well as debugging and testing. Open to learning new technologies and looking to
-                continue my career in web development and related IT areas. Able to effectively
-                self-manage during independent projects, as well as collaborate in a team setting,
-                and lead others to function in a team.
-                From Croatia, Europe.
-			</div>
-			<div class="contact-inline-row">
-				<div class="contact-cv-download">
-					Download full CV:
-					<a href="/documents/CV-Matej-Gaspert-2025.pdf" download class="cv-download-link" aria-label="Download CV">
-						<img src="/cv_icon.jpg" alt="Download CV" class="cv-icon" />
-					</a>
+﻿
+<div class="contact-container">
+	<swiper-container slides-per-view="1" navigation="true" loop="true" class="slider-cards">
+		<ng-container *ngFor="let card of cards">
+			<swiper-slide>
+				<div class="contact-card">
+					<img [src]="card.img" [alt]="card.title + ' profile photo'" class="profile-img" />
+					<h1 class="contact-name">{{ card.title }}</h1>
+					<h2 class="contact-title">{{ card.subtitle }}</h2>
+					<div>
+						<div class="contact-bio">{{ card.bio }}</div>
+					</div>
 				</div>
-				<div class="contact-links">
-					<a href="mailto:matejgaspert23@gmail.com" class="contact-email">matejgaspert23@gmail.com</a>
-					<a href="https://www.linkedin.com/in/matgas14/" class="linkedin-link" target="_blank" rel="noopener" aria-label="LinkedIn">
-						<img src="/linkedin.png" alt="LinkedIn" class="linkedin-icon" />
-					</a>
-				</div>
-			</div>
+			</swiper-slide>
+		</ng-container>
+	</swiper-container>
+
+	<div class="contact-inline-row">
+		<div class="contact-cv-download">
+			Download full CV:
+			<a [href]="cvLink" download class="cv-download-link" aria-label="Download CV">
+				<img src="/cv_icon.jpg" alt="Download CV" class="cv-icon" />
+			</a>
+		</div>
+		<div class="contact-links">
+			<a [href]="'mailto:' + email" class="contact-email">{{ email }}</a>
+			<a [href]="linkedin" class="linkedin-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+				<img src="/linkedin.png" alt="LinkedIn" class="linkedin-icon" />
+			</a>
 		</div>
 	</div>
 </div>

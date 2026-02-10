@@ -7,6 +7,14 @@
 	gap: 2rem;
 	margin-top: 1.2rem;
 	margin-bottom: 1.5rem;
+	background: rgba(255, 255, 255, 0.95);
+	border-radius: 1.5rem;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+	padding: 1.5rem 2rem;
+	max-width:  650px;
+	width: 80%;
+	opacity: 0.92;
+	z-index: 1;
 }
 
 .contact-cv-download {
@@ -40,11 +48,48 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	/* Multi-stop gradient: #020F31 (navy), #5E0241 (burgundy), #6582CE (blue), #FFE105 (yellow) */
 	background: url('/contact-background.jpg') no-repeat center center fixed;
 	background-size: cover;
-		background-position-x: -85rem;
-		position: relative;
+	position: relative;
+	flex-direction: column;
+}
+
+.slider {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.slider-cards {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width:  650px;
+}
+
+.slider-arrow {
+	background: #fff;
+	border: none;
+	border-radius: 50%;
+	box-shadow: 0 2px 8px rgba(128,0,32,0.08);
+	font-size: 2rem;
+	color: #800020;
+	cursor: pointer;
+	position: relative;
+	z-index: 2;
+	transition: background 0.2s, box-shadow 0.2s;
+}
+.slider-arrow:hover{
+	background: #800020;
+	box-shadow: 0 4px 16px rgba(128,0,32,0.15);
+	color: #fff;
+}
+.slider-arrow-left {
+	margin-right: 1.5rem;
+}
+.slider-arrow-right {
+	margin-left: 1.5rem;
 }
 
 .contact-container::before {
@@ -61,20 +106,22 @@
 }
 
 .contact-card {
-	background: rgba(255, 255, 255, 0.95);
-	position: relative;
-	z-index: 1;
-	border-radius: 1.5rem;
-	box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-	padding: 2.5rem 2rem 2rem 2rem;
-	max-width: 640px;
-	width: 100%;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-    opacity: 0.9;
+	 background: rgba(255, 255, 255, 0.95);
+	 position: relative;
+	 z-index: 1;
+	 border-radius: 1.5rem;
+	 box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+	 padding: 3rem;
+	 height: 500px;
+	 text-align: center;
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 opacity: 0.9;
+	 overflow: hidden;
+	 transition: none;
 }
+
 
 .profile-img {
 	width: 120px;
@@ -106,7 +153,6 @@
 .contact-bio {
 	font-size: 1rem;
 	color: #0A0E12;
-	text-align: left;
 	white-space: pre-line;
 }
 
