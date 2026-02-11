@@ -9,7 +9,7 @@
 					<th class="dates">Start Date</th>
 					<th class="dates">End Date</th>
 					<th class="position">Position</th>
-					<th>Available</th>
+					<th class="availability">Available</th>
 					<th>URL</th>
 				</tr>
 			</thead>
@@ -20,7 +20,7 @@
 					<td class="dates">{{ item.startDate | date:'yyyy-MM' }}</td>
 					<td class="dates">{{ item.endDate | date:'yyyy-MM' }}</td>
 					<td class="position">{{ item.position }}</td>
-					<td>
+					<td class="availability">
 						<span [class.available]="item.available" [class.unavailable]="!item.available">
 							{{ item.available ? 'Yes' : 'No' }}
 						</span>

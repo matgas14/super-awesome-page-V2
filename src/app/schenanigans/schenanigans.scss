@@ -7,11 +7,11 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 
-.schenanigans-content {
+.schenanigans-heading {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 1.5rem;
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
@@ -24,4 +24,57 @@
     flex-direction: column;
     align-items: center;
     opacity: 0.9;
+  
+    @media (max-width: 640px) {
+      width: 80%;
+    }
+
+}
+
+.schenanigans-content {
+  background: lightgrey;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 1450px;
+  width: 90%;
+  margin: 0 auto;
+  opacity: 0.9;
+  
+  @media (max-width: 640px) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 80%;
+  }
+
+  .doSomethingBtn {
+    color: white;
+    background: linear-gradient(90deg, #5d06ba, #a21285);
+    cursor: pointer;
+    transition: 500ms;
+
+    &:hover {
+      transform: scale(1.1);
+      color: purple;
+      background: white;
+    }
+  }
+
+  .doing-box {
+    width: 15rem;
+    height: 15rem;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+  }
+
+  .spinner i {
+    font-size: 2rem;
+  }
+
+  .counter {
+    float: right;
+  }
 }

@@ -1,6 +1,37 @@
 <div class="schenanigans-container">
-    <div class="schenanigans-content">
+    <div class="schenanigans-heading">
         <h1>Schenanigans</h1>
         <p>Here be schenanigans.</p>
     </div>
+    
+    <div class="schenanigans-content">
+        <button class="btn doSomethingBtn" (click)="doSomething()" [disabled]="loading()">{{loading() ? 'Loading...' : 'Do something'}}</button>
+        
+        <div class="doing-box">
+            <ng-container *ngIf="loading(); else doneTemplate">
+                <div class="spinner">
+                    <i class="fa fa-spinner fa-spin" aria-label="Loading"></i>
+                </div>
+            </ng-container>
+            <ng-template #doneTemplate>
+                    <div class="somethingdone" *ngIf="counter() > 0">
+                        Something has been <button class="btn doSomethingBtn" (click)="openModal()">done</button>
+                    </div>
+                    <div *ngIf="counter() === 0 && !loading()" class="nothingdone">
+                        nothing has been done yet...
+                    </div>
+            </ng-template>
+        </div>
+
+        <div class="counter">
+            counter: {{counter()}}
+        </div>
+
+        <app-modal *ngIf="showModal()"
+                   [title]="'Results:'"
+                   [content]="timeWastedText"
+                   (close)="closeModal()">
+        </app-modal>
+    </div>
 </div>
+
