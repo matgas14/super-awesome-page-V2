@@ -26,12 +26,13 @@
         <div class="counter">
             counter: {{counter()}}
         </div>
-
-        <app-modal *ngIf="showModal()"
-                   [title]="'Results:'"
-                   [content]="timeWastedText"
-                   (close)="closeModal()">
-        </app-modal>
     </div>
 </div>
+
+
+<app-modal *ngIf="showModal()"
+            [title]="'Results:'"
+            [content]="timeWastedText"
+            (close)="closeModal()">
+</app-modal>
 
