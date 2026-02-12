@@ -6,6 +6,9 @@
   background-position: center;
   min-height: 100%;
   padding: 2rem;
+  @media (max-width: 425px) {
+    padding: 0.5rem;
+  }
 }
 
 .home-grid {

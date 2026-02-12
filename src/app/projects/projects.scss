@@ -90,30 +90,11 @@
 	font-weight: bold;
 }
 
-@media (max-width: 1024px) {
-	.projects-table th.dates,
-	.projects-table td.dates {
-		display: none;
-	}
-}
-
-@media (max-width: 900px) {
-	.projects-table th.position,
-	.projects-table td.position {
-		display: none;
-	}
-}
-
 @media (max-width: 768px) {
-	.projects-table th.company,
-	.projects-table td.company {
-		display: none;
+	.projects-container {
+		padding: 1rem;
 	}
-}
-
-@media (max-width: 510px) {
-	.projects-table th.availability,
-	.projects-table td.availability {
-		display: none;
+    .projects-table-wrapper {
+		padding: 0;
 	}
 }

@@ -5,22 +5,22 @@
 			<thead>
 				<tr>
 					<th>Project</th>
-					<th class="company">Company</th>
-					<th class="dates">Start Date</th>
-					<th class="dates">End Date</th>
-					<th class="position">Position</th>
-					<th class="availability">Available</th>
+					<th>Company</th>
+					<th>Start Date</th>
+					<th>End Date</th>
+					<th>Position</th>
+					<th>Available</th>
 					<th>URL</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr *ngFor="let item of projects">
 					<td>{{ item.project }}</td>
-					<td class="company">{{ item.company }}</td>
-					<td class="dates">{{ item.startDate | date:'yyyy-MM' }}</td>
-					<td class="dates">{{ item.endDate | date:'yyyy-MM' }}</td>
-					<td class="position">{{ item.position }}</td>
-					<td class="availability">
+					<td>{{ item.company }}</td>
+					<td>{{ item.startDate | date:'yyyy-MM' }}</td>
+					<td>{{ item.endDate | date:'yyyy-MM' }}</td>
+					<td>{{ item.position }}</td>
+					<td>
 						<span [class.available]="item.available" [class.unavailable]="!item.available">
 							{{ item.available ? 'Yes' : 'No' }}
 						</span>
