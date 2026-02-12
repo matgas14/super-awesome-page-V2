@@ -1,7 +1,5 @@
 .schenanigans-container {
   background-image: url('/schen-background.webp');
-    padding: 2rem 0;
-    height: 1014px;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -9,6 +7,8 @@
     gap: 2rem;
     overflow-y: auto;
     overflow-x: hidden;
+    height: 100%;
+    padding: 1rem;
 }
 
 .schenanigans-heading {

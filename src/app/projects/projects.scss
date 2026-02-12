@@ -1,20 +1,4 @@
-.projects-table thead th {
-	position: sticky;
-	top: 0;
-	z-index: 2;
-	background: #2a1a3a;
-}
-.projects-table-scroll {
-	max-height: 650px;
-	overflow-y: auto;
-	width: 100%;
-}
-.projects-table tbody tr:nth-child(even) {
-	background-color: #e5e5eb;
-}
-
 .projects-container {
-	min-height: 1077px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -22,6 +6,7 @@
 	z-index: 0;
 	background: url('/projects-background.jpg') no-repeat center center fixed;
 	background-size: cover;
+    height: 100%;
 }
 
 .projects-table-wrapper {
@@ -40,6 +25,21 @@
 	opacity: 0.9;
     margin: auto 1rem;
     // max-height: 750px;
+}
+
+.projects-table thead th {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	background: #2a1a3a;
+}
+.projects-table-scroll {
+	max-height: 650px;
+	overflow-y: auto;
+	width: 100%;
+}
+.projects-table tbody tr:nth-child(even) {
+	background-color: #e5e5eb;
 }
 
 .projects-table-content {

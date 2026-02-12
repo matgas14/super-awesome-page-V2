@@ -142,8 +142,7 @@
 .app-body {
   flex: 1;
   background-color: white;
-  display: flex;
-  flex-direction: column;
+  display: grid;
 }
 
 .app-footer {
