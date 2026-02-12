@@ -7,15 +7,13 @@
 	background: url('/projects-background.jpg') no-repeat center center fixed;
 	background-size: cover;
     height: 100%;
+	max-width: 100vw;
 }
 
 .projects-table-wrapper {
-	background: rgba(255, 255, 255, 0.95);
 	position: relative;
 	z-index: 1;
 	border-radius: 1.5rem;
-	box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-	padding: 2.5rem 2rem 2rem 2rem;
 	max-width: 1450px;
 	width: 100%;
 	text-align: center;
@@ -24,7 +22,7 @@
 	align-items: center;
 	opacity: 0.9;
     margin: auto 1rem;
-    // max-height: 750px;
+    max-width: 100vw;
 }
 
 .projects-table thead th {
@@ -37,6 +35,8 @@
 	max-height: 650px;
 	overflow-y: auto;
 	width: 100%;
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+	max-width: 1450px;
 }
 .projects-table tbody tr:nth-child(even) {
 	background-color: #e5e5eb;
@@ -45,7 +45,6 @@
 .projects-table-content {
     width: 100%;
     max-height: 650px;
-    // overflow: auto;
 
     table > thead {
         width: 100%;
@@ -91,9 +90,6 @@
 }
 
 @media (max-width: 768px) {
-	.projects-container {
-		padding: 1rem;
-	}
     .projects-table-wrapper {
 		padding: 0;
 	}
