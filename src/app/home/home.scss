@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
 
-// New container for hero and grid
 .home-container {
   background-image: url('/background.jpg');
   background-size: cover;
@@ -155,7 +154,6 @@
   }
 }
 
-/* CTA Button */
 .cta-button {
   display: inline-block;
   padding: 0.8rem 1.5rem;
@@ -182,7 +180,6 @@
   }
 }
 
-/* Wizard Image: Row 3-4, Column 2 */
 .wizard-image {
   grid-column: 2;
   grid-row: 2 / 4;

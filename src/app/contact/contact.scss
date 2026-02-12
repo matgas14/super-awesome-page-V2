@@ -92,19 +92,6 @@
 	margin-left: 1.5rem;
 }
 
-.contact-container::before {
-	content: '';
-	position: fixed;
-	top: 82px;
-	left: 0;
-	width: 100vw;
-	height: 1078px;
-	background: rgba(40, 10, 60, 0.45); /* semi-transparent purple shade */
-	z-index: 0;
-	pointer-events: none;
-
-}
-
 .contact-card {
 	 background: rgba(255, 255, 255, 0.95);
 	 position: relative;

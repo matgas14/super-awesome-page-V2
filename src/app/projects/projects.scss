@@ -13,8 +13,6 @@
 	background-color: #e5e5eb;
 }
 
-// Projects page background and overlay (mirroring contact)
-
 .projects-container {
 	min-height: 1077px;
 	display: flex;
@@ -22,21 +20,8 @@
 	justify-content: center;
 	position: relative;
 	z-index: 0;
-	/* Only background image, overlay is on ::before */
 	background: url('/projects-background.jpg') no-repeat center center fixed;
 	background-size: cover;
-}
-
-.projects-container::before {
-	content: '';
-	position: fixed;
-	top: 82px;
-	left: 0;
-	width: 100vw;
-	height: 1078px;
-	background: rgba(40, 10, 60, 0.45); /* semi-transparent purple shade */
-	z-index: 0;
-	pointer-events: none;
 }
 
 .projects-table-wrapper {

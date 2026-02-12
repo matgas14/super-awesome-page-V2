@@ -72,16 +72,15 @@
   @media (max-width: 768px) {
     position: absolute;
     flex-direction: column;
+    width: 15rem;
     gap: 0;
-    width: 100%;
     background-color: #0A0E12;
     box-shadow: none;
     padding: 0;
     top: 82px;
-    left: 401px;
+    right: 0px;
     z-index: 999;
     a {
-      width: 100%;
       padding: 1rem;
       font-size: 1.1rem;
       background: #181c22;
